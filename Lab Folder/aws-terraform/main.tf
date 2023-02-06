@@ -13,14 +13,3 @@ resource "aws_instance" "ls-lab3-terraform-1" {
     Name = "Ubuntu"
   }
 }
-
-resource "aws_instance" "ls-lab3-terraform-2" {
-  ami = "ami-086c1d77a774201ee"
-  instance_type = "t2.micro"
-  key_name = "LS3"
-  vpc_security_group_ids = ["sg-05a6e7236cefff274"]
-
-  tags = {
-    Name = "Fedora"
-  }
-}
