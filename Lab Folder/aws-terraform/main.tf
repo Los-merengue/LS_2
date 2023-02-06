@@ -4,9 +4,9 @@ provider "aws" {
 }
 
 resource "aws_instance" "ls-terraform" {
-  ami = "ami-0fb653ca2d3203ac1"
+  ami = "ami-00874d747dde814fa"
   instance_type = "t2.micro"
-  key_name = "LS3"
+  key_name = "LS2"
   vpc_security_group_ids = ["sg-05d89bbcc1dfb2f5b"]
 
   tags = {
