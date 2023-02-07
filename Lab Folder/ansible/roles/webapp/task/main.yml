@@ -8,7 +8,7 @@
 - name: Copy DockerFile into the Instance
   become: yes
   copy:
-    src: Dockerfile
+    src: [Dockerfile,index.html]
     dest: /home/ubuntu
 
 - name: Build Docker image from Dockerfile
