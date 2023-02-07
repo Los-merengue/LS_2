@@ -9,7 +9,7 @@
   become: yes
   copy:
     src: [Dockerfile,index.html]
-    dest: /home/ubuntu
+    dest: /home/ubuntu/
 
 - name: Build Docker image from Dockerfile
   become: yes
