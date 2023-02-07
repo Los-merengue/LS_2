@@ -1,0 +1,6 @@
+---
+  hosts: web
+  user: ubuntu
+  become: true
+  roles:
+    - webapp
