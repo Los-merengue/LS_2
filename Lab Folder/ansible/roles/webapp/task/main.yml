@@ -1,0 +1,22 @@
+---
+  name: Ensure Docker is installed
+  become: yes
+  package:
+    name: docker
+    state: present
+
+  name: Copy DockerFile into the Instance
+  become: yes
+  copy:
+    src: Dockerfile
+    dest: /home/ubuntu
+
+  name: Build Docker image from Dockerfile
+  become: yes
+  command: docker build -t currency-converter:v1 .
+  args:
+    chdir: /home/ubuntu/Dockerfile
+
+  name: Start Docker container from image
+  become: yes
+  command: docker run -d -p 8080:80 currency-converter:v1
