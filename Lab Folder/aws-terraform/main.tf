@@ -10,6 +10,6 @@ resource "aws_instance" "ls-terraform" {
   vpc_security_group_ids = ["sg-0f251bc5451edffda"]
 
   tags = {
-    Name = "Ubuntu"
+    Name = "ubuntu"
   }
 }
